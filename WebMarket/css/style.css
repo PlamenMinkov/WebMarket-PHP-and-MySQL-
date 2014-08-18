@@ -1,0 +1,85 @@
+body{
+                background-image: url(../pictures/fon.jpg);
+            }
+            #all{
+                margin: 0px auto;
+                margin-top:15%;
+                width: 70%;              
+            } 
+            header{
+                margin-top: -18%;
+                padding-bottom: 18%;
+                margin-left: 38%;
+                font-size: 17px;
+            }
+            .nav{
+                margin-right: 36%;
+                float:right;
+                width: 150px;
+                text-align: center;
+                margin-bottom:-50px; 
+            }
+            .centralForm{
+                margin: 0px auto;
+                text-align: right;
+                width: 70%;
+            }
+            #textCenter{
+                text-align: center;
+                border-radius: 16px;
+                padding: 5px;
+                border: 2px solid #444;
+            }
+            td{
+                border-top:0px;
+                border-left:0px;
+                border-right:0px;
+            }
+            #shoppingCard{
+                margin-right: -5%;
+                margin-top:-17%;
+                padding-bottom: 17%;
+                padding-left: 5%;
+                float:right;
+                width: 40px;
+                height: 40px;
+                font-size: 12px;
+            }
+            .shoppingCardText{
+                margin-top:20px;
+                text-align: center;
+            }
+            .Form{
+                float:right;
+                margin-right: 16%;
+            }
+            .FormOne{
+                float:right;
+                margin-right: 20%;
+            }
+            #res, #textRes{
+                visibility: hidden;
+            }
+            .buyFromMarcetcar{
+                float:left;
+                margin-left:15%;
+            }
+            #asideDiv{
+                height: 350px;
+                width: 180px;
+                border: 4px firebrick;
+                border-radius: 18px;
+                background-color: whitesmoke;
+            }
+             
+            .RegIn{
+                margin:0px auto;
+                margin-top: 10%;
+                text-align: center;
+            }
+            .reclama{
+                text-align: center;
+            }
+            .idNum{
+                display: none;
+            }
