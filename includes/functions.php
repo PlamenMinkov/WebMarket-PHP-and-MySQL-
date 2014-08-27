@@ -118,4 +118,35 @@
     </table>
     <?php  
     }
+//drawing table for userMarket
+    function drawUserMarketTable($select){
+        $allPrice=0.00;        
+        foreach ($select as $row){
+    ?><tr>
+                        <td><?=$row['data']?></td>
+                        <td><?=$row['product_name']?></td>
+                        <td><?=$row['product_price']?></td>
+                        <td><?=$row['product_type']?></td>
+                        <td><?=$row['product_id']?></td>
+                        <td>
+                            <div>
+                                <a href="pictures/<?=$row['product_id']?>.jpg" class="highslide" onclick="return hs.expand(this)">
+                                    <p>Изображение</p>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>'
+        <?php
+            $allPrice+=$row['product_price'];
+        }?>
+        <tr>
+            <td>----</td>
+            <td>----</td>
+            <td><?=$allPrice?></td>
+            <td>----</td>
+            <td>----</td>
+            <td>----</td>
+        </tr>
+       <?php
+    }
 ?>

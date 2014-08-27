@@ -1,13 +1,12 @@
 <?php
 $pageTitle='Списък';
 include 'includes/header.php';
-var_dump($_SESSION);?>
-<header>
-           'Здравей <a href="userProfil.php" >'.$_SESSION['user_name'].'</a><br/>
-            <a href="destroy.php" style="padding-right:20px">Изход</а><a href="includes/logout.php" align="center">Към магазина</a><br/></header>
-            <a href="form.php" class="nav" style="margin-bottom:0px">Добави нов материал</a>';
+var_dump($_SESSION);
 ?>
-
+<header>
+           Здравей <a href="userProfil.php" ><?=$_SESSION['user_name']?></a><br/>
+            <a href="includes/logout.php" style="padding-right:20px">Изход</а><a href="index.php" align="center">Към магазина</a><br/></header>
+            <a href="form.php" class="nav" style="margin-bottom:0px">Добави нов материал</a>
     <?php
     $allPrice=0.00;
     
@@ -27,27 +26,32 @@ var_dump($_SESSION);?>
         if(!$_POST){
             $allPrice=0.00;        
             foreach ($select as $row){
-                    echo '<tr>
-                                <td>'.$row['data'].'</td>
-                                <td>'.$row['product_name'].'</td>
-                                <td>'.$row['product_price'].'</td>
-                                <td>'.$row['product_type'].'</td>
-                                <td>'.$row['product_id'].'</td>
-                                <td><div><a href="pictures/'.$row['product_id'].'.jpg" class="highslide" onclick="return hs.expand(this)">
+                    ?><tr>
+                        <td><?=$row['data']?></td>
+                        <td><?=$row['product_name']?></td>
+                        <td><?=$row['product_price']?></td>
+                        <td><?=$row['product_type']?></td>
+                        <td><?=$row['product_id']?></td>
+                        <td>
+                            <div>
+                                <a href="pictures/<?=$row['product_id']?>.jpg" class="highslide" onclick="return hs.expand(this)">
                                     <p>Изображение</p>
-                                </a></div>
-                                </td>
-                            </tr>';
+                                </a>
+                            </div>
+                        </td>
+                    </tr>'
+        <?php
                     $allPrice+=$row['product_price'];
-        }
-        echo '<tr>
-                    <td>----</td>
-                    <td>----</td>
-                    <td>'.$allPrice.'</td>
-                    <td>----</td>
-                    <td>----</td>
-                    <td>----</td>
-                </tr>';
+        }?>
+        <tr>
+            <td>----</td>
+            <td>----</td>
+            <td><?=$allPrice?></td>
+            <td>----</td>
+            <td>----</td>
+            <td>----</td>
+        </tr>
+       <?php
         }
         if($_POST){
             

@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 function load(){
     $.ajax({
-        url:'http://localhost/WebMarket/counter.php',
+        url:'http://localhost/WebMarket/WebMarket-PHP-and-MySQL-/counter.php',
         type:'POST',
         data:{val1:$("#id").val(),
               val2:$("#res").val(),
