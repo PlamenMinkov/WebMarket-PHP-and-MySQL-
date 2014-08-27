@@ -60,7 +60,7 @@
                     if(isset($_SESSION['user/admin'])&&$user==="admin"){
                 ?>                         
                     <td>
-                        <a href="includes/repairPrice.php?id='.$row['product_id'].'"><?=$row['product_price']?></a>
+                        <a href="includes/repairPrice.php?id=<?=$row['product_id']?>"><?=$row['product_price']?></a>
                     </td>';
                    <?php                        
                     }

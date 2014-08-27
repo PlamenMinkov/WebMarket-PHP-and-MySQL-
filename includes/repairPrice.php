@@ -8,7 +8,7 @@ if($_POST)
               echo $_GET['id']; 
               $upd='UPDATE `products` SET `product_price`="'.$pr.'" WHERE product_id="'.$_GET['id'].'"';
               mysqli_query($connection, $upd);
-header("location: ../index.php");                
+//header("location: ../index.php");                
 }
 }?>
 <form class="Form" method="POST">
