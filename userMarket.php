@@ -4,7 +4,7 @@ include 'includes/header.php';
 var_dump($_SESSION);?>
 <header>
            'Здравей <a href="userProfil.php" >'.$_SESSION['user_name'].'</a><br/>
-            <a href="destroy.php" style="padding-right:20px">Изход</а><a href="index.php" align="center">Към магазина</a><br/></header>
+            <a href="destroy.php" style="padding-right:20px">Изход</а><a href="includes/logout.php" align="center">Към магазина</a><br/></header>
             <a href="form.php" class="nav" style="margin-bottom:0px">Добави нов материал</a>';
 ?>
 
@@ -66,12 +66,6 @@ var_dump($_SESSION);?>
        
     }
     else{
-        echo '
-            <style>
-            aside#left{
-                margin-left: 3%;
-            }
-            </style>';
        echo '<p class="RegIn">Нямате налични продукти в пазарската Ви кошница!</p>'; 
     }
     ?>    

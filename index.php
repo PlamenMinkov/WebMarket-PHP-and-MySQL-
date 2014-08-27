@@ -14,7 +14,7 @@ include 'includes/header.php';
     ?>
     <header>
         Здравей <a href="userProfil.php"><?=$_SESSION['user_name']?></a><br/>
-                <a href="destroy.php">Изход</а>
+                <a href="includes/logout.php">Изход</а>
     </header>
             <div id="shoppingCard"><a href="userMarket.php"><img src="pictures/image.png" id="shoppingCard"/></a><br/>
             <a href="userMarket.php" class="shoppingCardText" id="shoppingCard"/>Пазарска количка</a></div>         
@@ -25,8 +25,8 @@ include 'includes/header.php';
     ?>
     <header>
         Здравей <?=$_SESSION['user_name']?><br/>
-        <a href="destroy.php">Изход</а><br/>
-    </header>';
+        <a href="includes/logout.php">Изход</а><br/>
+    </header>
 <?php endif;?>
 <form class="Form" method="POST">
         <select name="type">

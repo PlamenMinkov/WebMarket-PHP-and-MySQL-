@@ -4,7 +4,7 @@ include 'includes/header.php';
 ?>
     <header>
            Здравей <a href="userProfil.php" ><?=$_SESSION['user_name']?></a><br/>
-                   <a href="destroy.php" style="padding-right:20px">Изход</а>
+                   <a href="includes/logout.php" style="padding-right:20px">Изход</а>
                    <a href="index.php" align="center">Към магазина</a><br/>
     </header>
         <div id="shoppingCard">
